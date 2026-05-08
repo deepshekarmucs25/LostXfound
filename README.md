@@ -140,16 +140,16 @@ http://localhost:3000
 
 # 🗄️ Database Setup
 
-## Prisma Migration
+## Drizzle Migration
 
 ```bash
-npx prisma migrate dev
+bunx drizzle migrate 
 ```
 
 ## Generate Prisma Client
 
 ```bash
-npx prisma generate
+bun drizzle generate
 ```
 
 ---
