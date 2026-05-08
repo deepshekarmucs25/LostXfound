@@ -16,6 +16,7 @@ export const auth = betterAuth({
     }),
     trustedOrigins: [
         "https://lost-xfound.vercel.app",
+        "https://*.vercel.app",
         "http://localhost:3000",
     ],
     user: {
