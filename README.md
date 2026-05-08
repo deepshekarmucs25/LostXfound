@@ -158,11 +158,24 @@ npx prisma generate
 
 Add screenshots of:
 
+* Landing Page
+  <img width="1348" height="630" alt="image" src="https://github.com/user-attachments/assets/f939621d-5e2e-4016-b5f5-dd24faee7431" />
+
 * Home Page
+  <img width="1350" height="630" alt="image" src="https://github.com/user-attachments/assets/06f0790f-cf7c-4616-8777-0d2d2a5b7c3d" />
+
 * Lost Item Listing
+  <img width="1365" height="632" alt="image" src="https://github.com/user-attachments/assets/231066ff-758b-4582-bd98-d340e993f1e1" />
+
 * Found Item Listing
-* Dashboard
+  <img width="1363" height="631" alt="image" src="https://github.com/user-attachments/assets/9bc93d8a-bb93-42dd-8647-41069a8d2c9f" />
+
 * Authentication Pages
+
+  <img width="1348" height="629" alt="image" src="https://github.com/user-attachments/assets/3644463f-ab19-46c9-9951-d4ae117b464d" />
+
+  <img width="1352" height="630" alt="image" src="https://github.com/user-attachments/assets/b458c5fe-f2fc-43c3-941a-35dd789a325f" />
+
 
 ---
 
