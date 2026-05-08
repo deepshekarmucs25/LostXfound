@@ -14,6 +14,10 @@ export const auth = betterAuth({
             verification,
         },
     }),
+    trustedOrigins: [
+        "https://lost-xfound.vercel.app",
+        "http://localhost:3000",
+    ],
     user: {
         additionalFields: {
             role: { type: "string" },
