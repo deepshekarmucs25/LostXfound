@@ -1,28 +1,35 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { account, session, user, verification } from "../db/schema";
-import { db } from "../db";
+import { account, session, user, verification } from "@/server/db/schema";
+import { env } from "@/env";
+import { db } from "@/server/db";
 
-// server/auth.ts (or your Better Auth config file)
-// in your auth server config
 export const auth = betterAuth({
     database: drizzleAdapter(db, {
         provider: "pg",
         schema: {
-            user: user,
-            session: session,
-            account: account,
-            verification: verification
-        }
+            user,
+            session,
+            account,
+            verification,
+        },
     }),
-    // ADD THIS SECTION:
     user: {
         additionalFields: {
             role: { type: "string" },
-            address: { type: "string" }
-        }
+            address: { type: "string" },
+        },
     },
     emailAndPassword: {
-        enabled: true
-    }
+        enabled: true,
+    },
+    socialProviders: {
+        github: {
+            clientId: env.BETTER_AUTH_GITHUB_CLIENT_ID,
+            clientSecret: env.BETTER_AUTH_GITHUB_CLIENT_SECRET,
+            redirectURI: `${env.NEXT_PUBLIC_APP_URL}/api/auth/callback/github`,
+        },
+    },
 });
+
+export type Session = typeof auth.$Infer.Session;
